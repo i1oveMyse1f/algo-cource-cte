@@ -1,2 +1,3 @@
 # algo-cource-cte
-Cource in Center of Teaching Excellence (for schollchildren)
+
+Сourse on Algorithms and Data Structures in Center of Teaching Excellence (for schollchildren)
