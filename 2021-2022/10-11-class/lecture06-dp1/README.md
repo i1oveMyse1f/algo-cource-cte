@@ -123,6 +123,68 @@
   [Очень советую прочитать всё об НВП на e-maxx.](https://e-maxx.ru/algo/longest_increasing_subseq_log)
 </details>
 
+<details>
+<summary> Код с восстановлением ответа </summary>
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+const int INF = 2e9;
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int& x : a)
+        cin >> x;
+
+    vector<int> p(n, -1);
+    vector<int> dp(n + 1, INF);
+    vector<int> ind_dp(n + 1, -1);
+    dp[0] = -INF;
+
+    for (int i = 0; i < n; ++i) {
+        int l = 0, r = n + 1;
+        // dp[l]: dp[l] < a[i] и l - max
+
+        while (r - l > 1) { // [l; r)
+            int m = (r + l) / 2;
+            if (dp[m] < a[i])
+                l = m;
+            else
+                r = m;
+        }
+
+        dp[l + 1] = a[i];
+        ind_dp[l + 1] = i;
+        p[i] = ind_dp[l];
+    }
+
+    int i = 1;
+    while (dp[i + 1] != INF)
+        ++i;
+
+    i = ind_dp[i]; // индекс ( из a) последнего элемента самой длинной ВП
+    vector<int> ans;
+    ans.push_back(a[i]);
+    while (p[i] != -1) {
+        i = p[i];
+        ans.push_back(a[i]);
+    }
+
+    reverse(ans.begin(), ans.end());
+    for (int x : ans)
+        cout << x << ' ';
+}
+```
+
+</details>
+
 ## Рюкзак
 
 > Дано N предметов, n<sub>i</sub> предмет имеет массу w<sub>i</sub> > 0 и стоимость p<sub>i</sub> > 0. Необходимо выбрать из этих предметов такой набор, чтобы суммарная масса не превосходила заданной величины W (вместимость рюкзака), а суммарная стоимость была максимальна.
