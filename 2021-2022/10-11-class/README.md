@@ -41,5 +41,5 @@
 
 1. [Я (Денис)](https://t.me/i_1ove_myse1f) в телеграмме
 1. [Канал](https://t.me/joinchat/F9fLCLTh7ZA2M2Ni) с объявлениями и [чат](https://t.me/joinchat/dcMfEv29f3gzZDYy)
-1. Ссылка на таблицу с оценками появится тут
+1. [Ссылка](http://ec2-54-224-131-226.compute-1.amazonaws.com/standings/cte11-2021/) на таблицу с итогами
 1. Ссылка на записи лекций появится тут
