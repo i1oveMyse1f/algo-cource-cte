@@ -185,7 +185,7 @@ int main() {
     }
 
     int i = 1;
-    while (dp[i + 1] != INF)
+    while (i < n && dp[i + 1] != INF)
         ++i;
 
     i = ind_dp[i]; // индекс ( из a) последнего элемента самой длинной ВП
