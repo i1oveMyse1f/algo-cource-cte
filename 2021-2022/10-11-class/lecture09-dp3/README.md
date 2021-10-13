@@ -16,9 +16,35 @@
 
 #### Код
 
+<details>
+
 ```cpp
-// code will be here
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+const int N = 1e5 + 1;
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> cnt(N);
+    for (int i = 0; i < n; ++i) {
+        int x;
+        cin >> x;
+        cnt[x]++;
+    }
+    vector<long long> dp(N);
+    dp[0] = 0;
+    for (int i = 1; i < N; ++i) {
+        dp[i] = max(dp[i - 1], cnt[i] * 1LL * i + (i == 1 ? 0 : dp[i - 2]));
+    }
+    cout << max(dp[N - 1], dp[N - 2]);
+}
 ```
+</details>
 
 ## Задача (гирьки: две одинаковые кучки равной массы)
 
@@ -30,9 +56,74 @@
 
 ### Код
 
+<details>
+
 ```cpp
-// code will be here
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int N = 100;
+const int A = 100;
+bool dp[N + 1][N * A][N + 1];
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    int sum_w = 0;
+    for (int& x : a) {
+        cin >> x;
+        sum_w += x;
+    }
+
+    if (n % 2 || sum_w % 2) {
+        cout << -1;
+        return 0;
+    }
+
+    dp[0][0][0] = true;
+    for (int i = 0; i < n; ++i) {
+        for (int w = 0; w < n * A; ++w) {
+            for (int j = 0; j <= i; ++j) {
+                // dp[i][w][j] -> dp[i + 1][w][j], dp[i + 1][w + a[i]][j + 1]
+                dp[i + 1][w][j] |= dp[i][w][j];
+                dp[i + 1][w + a[i]][j + 1] |= dp[i][w][j];
+            }
+        }
+    }
+
+    if (!dp[n][sum_w / 2][n / 2]) {
+        cout << -1;
+        return 0;
+    }
+
+    int cur_w = sum_w / 2;
+    int cur_k = n / 2;
+    int i = n;
+
+    vector<int> ans1, ans2;
+    while (i > 0) {
+        if (!dp[i - 1][cur_w][cur_k]) { // dp[i][cur_w][cur_k]
+            ans1.push_back(i);
+            cur_w -= a[i - 1];
+            cur_k--;
+        }
+        else {
+            ans2.push_back(i);
+        }
+        i--;
+    }
+
+    for (int x : ans1)
+        cout << x << ' ';
+    cout << '\n';
+    for (int x : ans2)
+        cout << x << ' ';
+}
 ```
+</details>
 
 ## Задача (максимальное число)
 
@@ -48,9 +139,79 @@
 
 ### Код
 
+<details>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+const int N = 20;
+long long dp[N + 1][3][3];
+string opt[N + 1][3][3];
+
+int get_nf(int f, int new_d, char sd) {
+    sd -= '0';
+    if (f == 0 || f == 2)
+        return f;
+    if (new_d < sd)
+        return 0;
+    if (new_d == sd)
+        return 1;
+    if (new_d > sd)
+        return 2;
+}
+
+bool is_ok(int l, int lena, int lenb, int f1, int f2) {
+    bool ok1 = (l == lena && (f1 == 2 || f1 == 1)) || l > lena; // x >= a
+    bool ok2 = (l == lenb && (f2 == 1 || f2 == 0)) || l < lenb; // x <= b
+    return ok1 && ok2;
+}
+
+int main() {
+    long long a, b;
+    cin >> a >> b;
+
+    string sa = to_string(a), sb = to_string(b);
+    int la = sa.size(), lb = sb.size();
+
+    long long max_product = -1;
+    string ans;
+    memset(dp, -1, sizeof dp);
+    dp[0][1][1] = 1;
+    for (int l = 0; l < N; ++l) {
+        for (int f1 = 0; f1 < 3; ++f1) {
+            for (int f2 = 0; f2 < 3; ++f2) {
+                if (dp[l][f1][f2] == -1)
+                    continue;
+
+                for (int d = 0; d <= 9; ++d) {
+                    // dp[i][f1][f2] + d -> dp[i + 1][nf1][nf2]
+                    int nf1 = get_nf(f1, d, l < la ? sa[l] : '0'), nf2 = get_nf(f2, d, l < lb ? sb[l] : '0');
+                    if (dp[l + 1][nf1][nf2] <= dp[l][f1][f2] * d) {
+                        dp[l + 1][nf1][nf2] = dp[l][f1][f2] * d;
+                        opt[l + 1][nf1][nf2] = opt[l][f1][f2];
+                        opt[l + 1][nf1][nf2].push_back('0' + d);
+                    }
+
+                    if (is_ok(l, la, lb, f1, f2)) {
+                        if (max_product < dp[l][f1][f2]) {
+                            max_product = dp[l][f1][f2];
+                            ans = opt[l][f1][f2];
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    cout << ans;
+}
 ```cpp
-// code will be here
+
 ```
+</details>
 
 ## Задача (Настя и табло)
 
