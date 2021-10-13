@@ -140,6 +140,8 @@ int main() {
 ### Код
 
 <details>
+
+```cpp
 #include <iostream>
 #include <vector>
 #include <string>
@@ -208,8 +210,6 @@ int main() {
 
     cout << ans;
 }
-```cpp
-
 ```
 </details>
 
