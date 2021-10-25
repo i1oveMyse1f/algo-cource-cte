@@ -18,7 +18,7 @@
 
 ## Разбаловка
 
-| Контест       | Начало контеста | Длительность, Дни:Часы:Минуты | Баллов на 3 | Баллов на 4  | Баллов на 5 |
+| Контест       | Начало контеста | Длительность | Баллов на 3 | Баллов на 4  | Баллов на 5 |
 | ------------- | -- |-------------| ----- | -- | -- |
 | [Контест на реализацию](http://codeforces.com/group/NVZIV3kQX3/contest/344773) | 15.09.2021 16:00 | 14:00:00 | 2 | 4 | 10
 | [Стеки, очереди, деки](https://codeforces.com/gym/346723) | 30.09.2021 10:40 | 14:00:00 | 1,75 | 2,5 | 3,5
@@ -36,18 +36,18 @@
 
 ## Программа курса
 
-1. Markdown
+1. Markdown [[Конспект](./lecture01-markdown/), [Видео](https://youtu.be/UMHMXqlukCo)]
 1. Вступительный контест
-1. Разбор части задач вступительного контеста. Введение в C++
-1. Целочисленные и вещественные типы. Битовые операции
-1. Работа со строками. Функции
-1. Указатели и итераторы. Библиотеки algorithms и numeric
-1. Решаем задачи вместе
-1. Stack, queue
-1. Разбор задач. Deque. Устройство stack и queue
-1. Бинарный поиск
-1. Разбор задач. Сортировки
-1. Итераторы. Set, map
+1. Разбор части задач вступительного контеста. Введение в C++ [[Конспект](./lecture03-cpp-intro/), [Видео](https://youtu.be/a6Pb56uhM5o)]
+1. Целочисленные и вещественные типы. Битовые операции [[Конспект](./lecture04-cpp-types/), [Видео](https://youtu.be/eBpnaVYDiIg)]
+1. Работа со строками. Функции [[Конспект](./lecture05-cpp-string-functions/), [Видео](https://youtu.be/Qz6Axx5AvxE)]
+1. Указатели и итераторы. Библиотеки algorithms и numeric [[Конспект](./lecture06-cpp-iterators-stl/), [Видео](https://youtu.be/R23qfz1ruWI)]
+1. Решаем задачи вместе [[Конспект](./lecture07-solving-problems/), [Видео](https://youtu.be/NPo3-gDpn_U)]
+1. Stack, queue [[Конспект](./lecture08-stack-1/), [Видео](https://youtu.be/-TplheGSsp4)]
+1. Разбор задач. Deque. Устройство stack и queue [[Конспект](./lecture09-stack-2/), [Видео](https://youtu.be/XuJHrjhjo8Q)]
+1. Бинарный поиск [[Конспект](./lecture10-binsearch/), [Видео](https://youtu.be/JC788-t855s)]
+1. Разбор задач. Сортировки [[Конспект](./lecture11-sorting/), [Видео](https://youtu.be/kZBYrcApzOI)]
+1. Итераторы. Set, map [[Конспект](./lecture12-set/), [Видео](https://youtu.be/76bPesccDSU)]
 1. Разбор задач
 1. ДП: одномерное, многомерное
 1. ДП: задача о рюкзаке, по подотезкам
@@ -72,4 +72,4 @@
 1. [Я (Денис)](https://t.me/i_1ove_myse1f) в телеграмме
 1. [Канал](https://t.me/joinchat/Sd7AWPpEwDg0YTBi) с объявлениями и [чат](https://t.me/joinchat/dcrOXdfS4JkzYTJi)
 1. [Ссылка](http://ec2-54-224-131-226.compute-1.amazonaws.com/standings/cte9-2021/) на таблицу с итогами
-1. Ссылка на записи лекций появится тут
+1. [Ссылка](https://youtube.com/playlist?list=PLXKRy1QlvcjNtZ161f4BNyUTYcrlnJIhT) на записи лекций
