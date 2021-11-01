@@ -42,7 +42,7 @@
 1. Бинарный поиск [[Конспект](./lecture10-binsearch/), [Видео](https://youtu.be/JC788-t855s)]
 1. Разбор задач. Сортировки [[Конспект](./lecture11-sorting/), [Видео](https://youtu.be/kZBYrcApzOI)]
 1. Итераторы. Set, map [[Конспект](./lecture12-set/), [Видео](https://youtu.be/76bPesccDSU)]
-1. Решаем задачи Div2a
+1. Решаем задачи Div2a [[Видео](https://youtu.be/SRxg-2HOmRc)]
 1. Решаем задачи Div2a
 1. Решаем задачи Div2a
 1. Решаем задачи Div2a
