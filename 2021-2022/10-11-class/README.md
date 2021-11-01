@@ -39,7 +39,7 @@
 ## Prerequirements
 
 1. С++: умение решать простенькие задачи
-1. Бинарный поиск, сортировки
+1. Бинарный поиск, сортировки [[Конспект по сортировкам](https://github.com/i1oveMyse1f/algo-cource-cte/tree/main/2021-2022/9-class/lecture11-sorting), [Видео по сортировкам](https://youtu.be/kZBYrcApzOI?t=423)]
 
 ## Программа курса
 
@@ -55,6 +55,7 @@
 1. Stack, queue, deque [[Конспект](./lecture10-stack-1/), [Видео]()]
 1. Разбор задач. Устройство стека и друзей [[Конспект](./lecture11-stack-2/), [Видео](https://youtu.be/fSxxYj-DTHU)]
 1. STL, C++17 [[Конспект](./lecture12-stl/), [Видео](https://youtu.be/qbjxfDLHxV0)]
+1. Олимпиадный тур: муниципальный этап
 1. Разбор задач: STL. Scanline.
 1. Стресс-тестирование. Два указателя.
 1. Графы: хранение, dfs, поиск цикла, bfs
