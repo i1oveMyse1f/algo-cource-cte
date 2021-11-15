@@ -27,7 +27,7 @@
 | [ДП-2](https://codeforces.com/gym/346638) | 30.09.2021 09:00 | 14:00:00 | 2 | 3,5 | 4
 | [Stack и друзья](https://codeforces.com/gym/349070) | 14.10.2021 09:00 | 7:00:00 | 2 | 3 | 5
 | [STL](http://codeforces.com/gym/350203) | 21.10.2021 09:00 | 7:00:00 | 3 | 4 | 7
-| [Scanline](https://codeforces.com/gym/351360) | 27.10.2021 12:50 | 14:00:00 | 2 | 3 | 4
+| [Scanline](https://codeforces.com/gym/351360) | 27.10.2021 12:50 | 21:00:00 | 2 | 3 | 4
 | [Два указателя](https://codeforces.com/contest/350243) | 10.11.2021 12:50 | 7:00:00 | 2 | 3 | 4
 | [Обход графа](https://youtu.be/ZRIoKV4X_34) | 11.11.2021 09:00 | 7:00:00 | 2 | 5 | 8
 | ДП-3 | TBA | | | |
