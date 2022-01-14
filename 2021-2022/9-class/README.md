@@ -32,6 +32,7 @@
 | ------------- | -- |-------------| ----- | -- | -- |
 | [Бинарный поиск](https://codeforces.com/gym/349074) | 01.12.2021 14:30 | 7:00:00 | 4 | 5 | 6
 | [(Почти)линейная динамика](https://codeforces.com/gym/357639) | 02.12.2021 10:40 | 14:00:00 | 3 | 4 | 5
+| [(Почти)линейная динамика](https://codeforces.com/gym/357639) | 02.12.2021 10:40 | 14:00:00 | 3 | 4 | 5
 | TBA | | | | |
 
 ## Программа курса
@@ -62,10 +63,14 @@
 1. Динамическое программирование: линейное, НВП, рюкзак [[Видео](https://youtu.be/Sz1C02sKpxE), [Конспект](./lecture20-dp-1)]
 1. Динамическое программирование: практика [[Видео](https://youtu.be/_a6bChlwTIc)]
 1. Динамическое программирование: решаем задачи вместе [[Видео](https://youtu.be/43xw0YUXa1o)]
+1. DFS, BFS [[Конспект](./lecture26-dfs-1/), [Видео](https://youtu.be/I-2puwAvlKg)]
+1. Разбор задач: DFS, BFS [[Видео](https://youtu.be/TKmcTBfVw0E)]
+1. Мосты и точки сочленения [[Конспект](./lecture28-bridges-1), [Видео](https://youtu.be/md4p9cauol4)]
+1. Разбор задач: Мосты и точки сочленения [[Видео](https://youtu.be/md4p9cauol4)]
+1. Топологическая сортировка [[Конспект](./lecture30-topsort), [Видео](https://youtu.be/Yb03LHcrP0Y)]
 
 ## Ссылки
 
 1. [Я (Денис)](https://t.me/i_1ove_myse1f) в телеграмме
-1. [Канал](https://t.me/joinchat/Sd7AWPpEwDg0YTBi) с объявлениями и [чат](https://t.me/joinchat/dcrOXdfS4JkzYTJi)
 1. [Ссылка](http://ec2-54-224-131-226.compute-1.amazonaws.com/standings/cte9-2021/) на таблицу с итогами
 1. [Ссылка](https://youtube.com/playlist?list=PLXKRy1QlvcjNtZ161f4BNyUTYcrlnJIhT) на записи лекций
