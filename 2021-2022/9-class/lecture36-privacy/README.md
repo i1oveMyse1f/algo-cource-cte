@@ -1,1 +1,1 @@
-# Data Privacy and Security
+# Privacy and Security
