@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<!-- Begin Article
+================================================== -->
+<div>
+    <div class="row">
+        {% assign author = site.authors[page.author] %}
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+                {% if page.author %}
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        {% if author.avatar %}
+                        <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
+                        {% else %}
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank">{{ author.display_name }}</a>
+                        {% if author.tg %}
+                        <a target="_blank" href="{{ author.tg }}" class="btn tg">
+                            <img class="icon" width=24px height=24px src="{{ site.baseurl }}/assets/images/tg.png" alt="Contact author via telegram">
+                        </a>
+                        {% endif %}
+                        <span class="author-description">{{ author.description }}</span>
+                    </div>
+                </div>
+                {% endif %}
+
+                <h1 class="posttitle">{{ page.title }}</h1>
+            </div>
+
+            <!-- Post Content -->
+            <div class="article-lecture">
+                <!-- Toc if any -->
+                {% if page.toc %}
+                    {% if page.beforetoc %}
+                        <p><em>{{page.beforetoc}}</em></p>
+                    {% endif %}
+                    <div class="toc mt-4 mb-4 lead">
+                        <h3 class="font-weight-bold">Оглавление</h3>
+                        {% include toc.html html=content %}
+                    </div>
+                {% endif %}
+                <!-- End Toc -->
+
+                {% if page.youtube %}
+                <div class="youtube">
+                    <h2 class="youtube-link">Запись занятия</h2>
+                    <p>
+                        <iframe style="width:100%;" height="600" src="https://www.youtube.com/embed/2Ocft5XYdyM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                </div>
+                {% endif %}
+
+                {% if page.pdf %}
+                {% assign lecture_dir = page.path | remove: "README.md" | remove: "_pages/" %}
+                <div class="pdf">
+                    <h2 class="pdf-view">Конспект</h2>
+                    <object data="{{ site.baseurl }}/{{ lecture_dir }}/{{ page.pdf }}" type="application/pdf" width="100%" height="600">
+                    </object>
+                </div>
+                {% endif %}
+
+                {{content}}
+            </div>
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
