@@ -23,7 +23,7 @@ toc: true
 
 #### Код
 
-<details>
+<details markdown="1">
 
 ```cpp
 #include <iostream>
@@ -63,7 +63,7 @@ int main() {
 
 ### Код
 
-<details>
+<details markdown="1">
 
 ```cpp
 #include <iostream>
@@ -146,7 +146,7 @@ int main() {
 
 ### Код
 
-<details>
+<details markdown="1">
 
 ```cpp
 #include <iostream>

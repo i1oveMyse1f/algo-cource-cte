@@ -13,7 +13,7 @@ toc: true
 
 Паросочетание (англ. matсhing) M в двудольном графе - произвольное множество рёбер графа такое, что никакие два ребра не имеют общей вершины.
 
-<details>
+<details markdown="1">
 
 <summary>
 Решение
@@ -37,7 +37,7 @@ dp[v][1] = max<sub>u - сын v</sub> dp[v][0] - max(dp[u][0], dp[u][1]) + dp[u]
 </p>
 </details>
 
-<details>
+<details markdown="1">
 <summary>
 Код
 </summary>
@@ -64,7 +64,7 @@ void dfs(int v, int p = -1) {
 
 > В дереве для каждой вершины необходимо найти самый длинный путь, проходящий через неё за линейное время.
 
-<details>
+<details markdown="1">
 <summary>
 Решение
 </summary>

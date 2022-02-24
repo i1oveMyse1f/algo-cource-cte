@@ -136,7 +136,7 @@ char i = b >> 2; // 101 >> 2 = 1
 
 > Как получить 2<sup>n</sup>?
 
-<details>
+<details markdown="1">
 <summary>Решение</summary>
 
 ```cpp
@@ -147,7 +147,7 @@ long long y = 1LL << n;
 
 > Как убрать последнюю единицу в битовой записи?
 
-<details>
+<details markdown="1">
 <summary>Решение</summary>
 
 ```cpp
@@ -167,7 +167,7 @@ int y = x & (x + 1); // x без группы из единиц на конце 
 
 > Задача коммивояжера. Во взвешенном графе необходимо проложить маршрут кратчайшей длины, посещающий все вершины, при том каждую только один раз.
 
-<details>
+<details markdown="1">
 
 <summary>Решение</summary>
 
@@ -184,7 +184,7 @@ dp[new_mask][u] = min(dp[new_mask][u], dp[mask][v] + adj[v][u])
 
 </details>
 
-<details>
+<details markdown="1">
 
 <summary>Код</summary>
 

@@ -134,7 +134,7 @@ char i = b >> 2; // 101 >> 2 = 1
 
 > Как получить 2<sup>n</sup>?
 
-<details>
+<details markdown="1">
 <summary>Решение</summary>
 
 ```cpp
@@ -145,7 +145,7 @@ long long y = 1LL << n;
 
 > Как убрать последнюю единицу в битовой записи?
 
-<details>
+<details markdown="1">
 <summary>Решение</summary>
 
 ```cpp
