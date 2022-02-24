@@ -37,11 +37,20 @@ toc: true
 </details>
 </div>
 
-<div>
-<details>
+<details markdown="1"><summary>$\mathcal O(n)$ Code</summary>
 
-  <summary>Код</summary>
-  
+```c++
+int solve(int l, int r, int delta) {
+    if (l > r)
+        return 0;
+    // we will apply type 1 operation (min a_i) times
+    int idx = sparse_table.query(l, r), mn = a[idx] - delta;
+    // return minimum of our two options: solve recursively, or just apply type 2 operations to each element
+    return min(solve(l, idx - 1, delta + mn) + solve(idx + 1, r, delta + mn) + mn, r - l + 1);
+}
+```
+</details>
+
 ```cpp
 int main() {
     int n;
@@ -54,8 +63,6 @@ int main() {
     cout << dp[n - 1];
 }
 ```
-</details>
-</div>
 
 На примере выше мы разобрались, что для решения задачи на ДП нужно 4 вещи:
 
