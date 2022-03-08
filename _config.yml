@@ -29,6 +29,10 @@ authors:
     display_name: Данила Кутенин
     tg: https://t.me/experimentalchill
     description: "Work in big tech companies and currently working at Google doing pipeline data processing systems. Check out Dataflow and Apache Beam."
+  smax:
+    name: smax
+    display_name: smax
+    description: "cp-blog"
 
 
 # Plugins
