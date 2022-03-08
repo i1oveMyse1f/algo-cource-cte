@@ -3,7 +3,7 @@ layout: lecture
 title:  "Divide and Conquer"
 author: smax
 categories: [tutorial]
-youtube: tZzRAkLTIZQ
+youtube: nL6VLziMFsw
 toc: true
 ---
 
@@ -75,6 +75,7 @@ void sort(vector<int> &a) {
     a = merge(left, right);
 }
 ```
+
 </details>
 
 In general, the code for any divide and conquer algorithm might look something like this:
@@ -123,6 +124,7 @@ int solve(int l, int r) {
     return min(solve(l, idx - 1) + solve(idx + 1, r) + mn, r - l + 1);
 }
 ```
+
 <details markdown="1" style="margin-bottom: 5%"><summary>An Aside</summary>
 Notice that this code allows applying type 2 operations on some $a_i = 0$, which is technically not allowed. Luckily, we will never do that in the optimal solution anyways, so it's ok that our code permits this possibility. This is actually a very common trick in CP: relaxing the conditions of the problem to ease the implementation because we know the optimal solution will follow a stricter set of conditions. [This problem](https://codeforces.com/contest/1473/problem/E) is another example of that trick (though it's not a D&Q problem).
 </details>
@@ -192,6 +194,7 @@ bool solve(vector<int>& nums) {
     return recur(0, (int) nums.size() - 1, nums);
 }
 ```
+
 The above code ACs in 235 ms.
 </details>
 
