@@ -3,7 +3,7 @@ layout: lecture
 title:  "ДП по подотрезкам"
 author: i_love_myself
 categories: [ dp ]
-youtube: IPqtpLnLCkE
+youtube: r0G3Ocv0TuM
 toc: true
 ---
 
