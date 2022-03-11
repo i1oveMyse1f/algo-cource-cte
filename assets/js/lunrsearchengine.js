@@ -23,7 +23,7 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
 
 var idx = lunr(function () {
     this.use(lunr.ru);
-    
+
     this.ref('id')
     this.field('title')
     this.field('body')
@@ -32,6 +32,7 @@ var idx = lunr(function () {
         this.add(doc)
     }, this)
 });
+
 function lunr_search(term) {
     document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
     if(term) {
