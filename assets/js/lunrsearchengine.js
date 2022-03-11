@@ -4,7 +4,7 @@ sitemap: false
 ---
 
 {% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains 'tag' %}{% else %}{
+var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'category' or page.url contains "README" page.url contains 'tag' %}{% else %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
@@ -20,6 +20,10 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
     "title": "{{ page.title }}",
     "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
     }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+
+var lunr = require("lunr")
+require("lunr-languages/lunr.stemmer.support")(lunr)
+require("lunr-languages/lunr.ru")(lunr)
 
 var idx = lunr(function () {
     this.ref('id')
