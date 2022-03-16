@@ -131,3 +131,4 @@ $$
 
 1. [neerc](https://neerc.ifmo.ru/wiki/index.php?title=Meet-in-the-middle)
 1. [algorithmica](https://ru.algorithmica.org/cs/decomposition/mitm/)
+1. [cf Errichto blog](https://codeforces.com/blog/entry/95571)
