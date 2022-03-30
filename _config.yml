@@ -33,6 +33,10 @@ authors:
     name: smax
     display_name: smax
     description: "cp-blog"
+  algorithmica:
+    name: algorithmica
+    display_name: algorithmica
+    description: "algorithmica.org"
 
 
 # Plugins
