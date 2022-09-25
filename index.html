@@ -9,6 +9,24 @@ title: Home
 
     <div class="section-title">
 
+        <h2><span>2022-2023</span></h2>
+
+    </div>
+
+    <div class="row listrecent">
+
+        {% for post in paginator.posts %}
+
+        {% if page.year == 23 %}
+
+        {% include postbox.html %}
+
+        {% endfor %}
+
+    </div>
+
+    <div class="section-title">
+
         <h2><span>2021-2022</span></h2>
 
     </div>
@@ -16,6 +34,8 @@ title: Home
     <div class="row listrecent">
 
         {% for post in paginator.posts %}
+
+        {% if page.year == 22 %}
 
         {% include postbox.html %}
 
